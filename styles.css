@@ -1584,6 +1584,10 @@ ul {
     .pricing-card { padding: 3rem 1.5rem; }
     .new-price { font-size: 4rem; }
     
+    .how-grid { gap: 1rem; }
+    .how-step { padding: 1.5rem 1rem; }
+    .step-number { font-size: 3.5rem; top: -10px; }
+    
     .feature-grid, .cards-grid, .benefit-grid, .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -1591,6 +1595,7 @@ ul {
     .footer-grid { text-align: center; gap: 3rem; }
     
     .floating-mobile-cta { display: block; }
+    .whatsapp-float { bottom: 6.5rem; right: 1.5rem; width: 55px; height: 55px; font-size: 1.8rem; }
 }
 
 @media (max-width: 480px) {
