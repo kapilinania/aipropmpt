@@ -1086,6 +1086,74 @@ ul {
     color: var(--text-muted);
 }
 
+/* How It Works */
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.how-step {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.step-number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: -1;
+    line-height: 1;
+}
+
+.how-icon-box {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+    transition: var(--transition);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.how-step:hover .how-icon-box {
+    transform: translateY(-10px);
+    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.how-step h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.how-step p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .how-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
 /* Pricing */
 .pricing-card {
     max-width: 500px;
