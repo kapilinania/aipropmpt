@@ -632,6 +632,23 @@ ul {
     100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
 }
 
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    transition: var(--transition);
+}
+
+.icon-box i {
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.4));
+}
+
 /* Animations update */
 .fade-in-up {
     opacity: 0;
@@ -1373,7 +1390,6 @@ ul {
     background: rgba(9, 9, 11, 0.9);
     backdrop-filter: blur(10px);
     border-top: 1px solid var(--color-border);
-    z-index: 90;
     display: none;
 }
 
