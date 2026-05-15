@@ -225,7 +225,31 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Stop auto-slide on hover
         const sliderContainer = document.querySelector('.testimonial-slider-container');
-        sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
-        sliderContainer.addEventListener('mouseleave', () => autoSlide = setInterval(() => nextBtn.click(), 5000));
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+            sliderContainer.addEventListener('mouseleave', () => autoSlide = setInterval(() => nextBtn.click(), 5000));
+        }
+    }
+
+    // 9. Mobile Menu Toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    const navLinkItems = document.querySelectorAll('.nav-link');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        // Close menu when clicking a link
+        navLinkItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
     }
 });
